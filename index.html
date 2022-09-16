@@ -1,37 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        img {
-  width: 284px;
-  margin: 40px;
+<style>
+.mask1 {
+  -webkit-mask-image: linear-gradient(black, transparent);
+  mask-image: linear-gradient(black, transparent);
 }
 
-.svg-normal-mask {
-  mask: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/stampTiles.svg);
+.mask2 {
+  -webkit-mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%);
+  mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%);
 }
 
-.svg-border-mask {
-    mask-clip: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/stampTiles.svg);
-  -webkit-mask-box-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/stampTiles.svg) 30 repeat;
-  mask-border: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/stampTiles.svg) 30 repeat;
+.mask3 {
+  -webkit-mask-image: radial-gradient(black 50%, rgba(0, 0, 0, 0.5) 50%);
+  mask-image: radial-gradient(black 50%, rgba(0, 0, 0, 0.5));
 }
 
-body {
-  transform-origin: top left;
-  transform: scale(0.5);
-  white-space: nowrap;
-  overflow: hidden;
+.mask4 {
+  /* -webkit-mask-image: url(https://logos-world.net/wp-content/uploads/2020/08/Google-Chrome-Logo-2011-2014.png);
+  -webkit-mask-clip: url(https://logos-world.net/wp-content/uploads/2020/08/Google-Chrome-Logo-2011-2014.png);
+  /* -webkit-mask-image: url(https://www.w3schools.com/css/w3logo.png); 
+  mask-image: url(https://www.w3schools.com/css/w3logo.png);
+  -webkit-mask-size: 70%;
+  mask-size: 70%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;    
+    -webkit-mask-clip: luminance; */
+
+  width: 600px;
+  height: 400px;
+  background: green;
+  border: 20px solid red;
+  padding: 50px;
+  -webkit-mask-image: url(https://cdn.iconscout.com/icon/free/png-256/google-chrome-19-1175313.png);
+  /* -webkit-mask-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/stampTiles.svg); */
+  /* mask-image: url(https://static.wikia.nocookie.net/logopedia/images/9/98/Google_Chrome_Logo_2008.svg); */
+  /* mask-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/stampTiles.svg); */
+  mask-image: url(https://cdn.iconscout.com/icon/free/png-256/google-chrome-19-1175313.png);
+  -webkit-mask-size: 80%;
+  mask-size: 80%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;    
+  -webkit-mask-origin: border-box;
+   mask-origin: border-box;  
+  mask-type: alpha;
 }
-    </style>
+
+.mask5 {
+  width: 600px;
+  height: 400px;
+  /* background-color: crimson; */
+  -webkit-mask-image: url(https://cdn.iconscout.com/icon/free/png-256/google-chrome-19-1175313.png);
+  mask-image: url(https://cdn.iconscout.com/icon/free/png-256/google-chrome-19-1175313.png);
+  -webkit-mask-size: 60%;
+  mask-size: 60%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;    
+  -webkit-mask-origin: border-box;
+   mask-origin: border-box;  
+  mask-type: alpha;
+}
+
+
+</style>
 </head>
 <body>
-    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/Harry-Potter-1-.jpg" alt="" class="svg-normal-mask" />
-    
-    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/Harry-Potter-1-.jpg" alt="" class="svg-border-mask" />
+
+<h1>The mask-image Property</h1>
+
+<h3>An image with a mask layer (from top to bottom):</h3>
+<div class="mask1">
+<img src="https://www.w3schools.com/cssref/img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+</div>
+
+<h3>An image with a mask layer (a circle):</h3>
+<div class="mask2">
+<img src="https://www.w3schools.com/cssref/img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+</div>
+
+<h3>An image with a mask layer (an ellipse):</h3>
+<div class="mask3">
+<img src="https://www.w3schools.com/cssref/img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+</div>
+
+<h3>Original image:</h3>
+<img src="https://www.w3schools.com/cssref/img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+
+
+<div class="mask4">
+    <img src="https://www.w3schools.com/cssref/img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+</div>
+
+
+
+<div class="mask5">
+   <div style="background-color: aqua;height: 500px;width: 100%;">
+
+    <h1 style="padding: 25% 22%;">guddu</h1>
+</div>
+</div>
+
+
+
+
 </body>
 </html>
